@@ -1,0 +1,5 @@
+build/
+build-*/
+build-appimage/
+dist/
+*.user

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=QtEdit
+GenericName=Text Editor
+Comment=A small, fast text editor built with Qt 6 and C++
+Exec=qtedit %F
+TryExec=qtedit
+Icon=qtedit
+Terminal=false
+Categories=Utility;TextEditor;Qt;
+Keywords=text;editor;code;plain;programming;
+MimeType=text/plain;text/markdown;text/x-csrc;text/x-chdr;text/x-c++src;text/x-c++hdr;text/x-python;text/x-shellscript;application/json;
+StartupNotify=true
+StartupWMClass=qtedit

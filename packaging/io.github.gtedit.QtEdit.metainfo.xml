@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.gtedit.QtEdit</id>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+
+  <name>QtEdit</name>
+  <summary>A small, fast Qt 6 text editor</summary>
+
+  <description>
+    <p>
+      QtEdit is a lightweight text editor built with Qt 6 and C++. It is designed
+      to stay out of the way while providing the features needed for everyday
+      editing and programming.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Line numbers and current-line highlighting</li>
+      <li>Syntax highlighting for C/C++, Python, JSON, and shell scripts</li>
+      <li>Find bar with match case, highlight-all, and wrap-around search</li>
+      <li>Auto-indent, brace dedent, and spaces-based tab indentation</li>
+      <li>Light and dark themes</li>
+      <li>Configurable font, zoom, word wrap, and full-screen mode</li>
+      <li>Recent files, go-to-line, and drag-and-drop file opening</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">qtedit.desktop</launchable>
+
+  <provides>
+    <binary>qtedit</binary>
+  </provides>
+
+  <categories>
+    <category>Utility</category>
+    <category>TextEditor</category>
+  </categories>
+
+  <developer id="io.github.gtedit">
+    <name>QtEdit contributors</name>
+  </developer>
+
+  <keywords>
+    <keyword>text</keyword>
+    <keyword>editor</keyword>
+    <keyword>code</keyword>
+    <keyword>programming</keyword>
+  </keywords>
+
+  <releases>
+    <release version="1.0.0" date="2026-10-20">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1"/>
+</component>
