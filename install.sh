@@ -271,14 +271,19 @@ install_dependencies() {
 
 # --------------------------------------------------------------- building
 
+# Sets BINARY to the built executable. It deliberately does not print the
+# path: callers must not use command substitution, because the build and
+# dependency steps log to stdout and that output would be captured together
+# with the path.
 build_application() {
-    local binary=""
     local candidate
+
+    BINARY=""
 
     if [ "$DO_BUILD" -eq 0 ]; then
         for candidate in "$ROOT/build/qtedit" "$ROOT/build/Release/qtedit"; do
             if [ -x "$candidate" ]; then
-                printf '%s\n' "$candidate"
+                BINARY="$candidate"
                 return 0
             fi
         done
@@ -297,7 +302,7 @@ build_application() {
 
     for candidate in "$ROOT/build/qtedit" "$ROOT/build/Release/qtedit"; do
         if [ -x "$candidate" ]; then
-            printf '%s\n' "$candidate"
+            BINARY="$candidate"
             return 0
         fi
     done
@@ -576,7 +581,7 @@ if [ -n "$APPIMAGE" ]; then
     log "Installing from AppImage: $APPIMAGE"
     stage_appimage_install "$APPIMAGE"
 else
-    BINARY="$(build_application)"
+    build_application
     log "Staging $(basename "$BINARY")"
     stage_source_install "$BINARY"
 fi
